@@ -7,4 +7,8 @@ attr_reader :name, :author, :damaged
     @damaged = damaged
   end
 
+  def is_damaged
+    @damaged = true
+  end
+
 end

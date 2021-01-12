@@ -18,8 +18,9 @@ describe Book do
   end
 
   it "should be able to be reported as damaged" do
-    subject.is_damaged
-    expect(subject.damaged).to eq true
+    book = Book.new("Harry Potter and the Philosopher's Stone", "J. K. Rowling")
+    book.is_damaged
+    expect(book.damaged).to eq true
   end
 
 end
