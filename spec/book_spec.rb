@@ -12,4 +12,9 @@ describe Book do
     expect(book.author).to eq "J. K. Rowling"
   end
 
+  it "should not be damaged after first init" do
+    book = Book.new("Harry Potter and the Philosopher's Stone", "J. K. Rowling")
+    expect(book.damaged).to eq false
+  end
+
 end
