@@ -17,4 +17,9 @@ describe Book do
     expect(book.damaged).to eq false
   end
 
+  it "should be able to be reported as damaged" do
+    subject.is_damaged
+    expect(subject.damaged).to eq true
+  end
+
 end
