@@ -1,8 +1,8 @@
 class Book
-attr_reader :name, :author, :damaged
+attr_reader :title, :author, :damaged
 
-  def initialize(name, author, damaged = false)
-    @name = name
+  def initialize(title, author, damaged = false)
+    @title = title
     @author = author
     @damaged = damaged
   end

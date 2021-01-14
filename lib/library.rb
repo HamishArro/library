@@ -1,5 +1,7 @@
+require 'book.rb'
+
 class Library
-  attr_reader :book_list
+  attr_reader :book_list, :damaged_count
 
   def initialize
     @book_list = []
@@ -10,7 +12,13 @@ class Library
   end
 
   def list_books
-    @book_list.each { |name| puts name }
+    @book_list.each { |book| puts book }
+  end
+
+  def count_damaged
+    @damaged_count = 0
+    @book_list.each { |book| @damaged_count += 1 if book.damaged == true }
+    @damaged_count
   end
 
 end
