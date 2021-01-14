@@ -13,15 +13,20 @@ describe Library do
     expect(subject.book_list).to include book
   end
 
-  it "list books" do
+  it "list books by title" do
     subject.add_book(book)
-    expect{ subject.list_books }.to output { book }.to_stdout
+    expect{ subject.list_books }.to output { book.title }.to_stdout
   end
 
   it "returns amount of damaged books" do
     book.is_damaged
     subject.add_book(book)
     expect(subject.count_damaged).to eq 1
+  end
+
+  it "returns specific a author's titles" do
+    subject.add_book(book)
+    expect { subject.list_author(book.author) }.to output { book.title }.to_stdout
   end
 
 end
